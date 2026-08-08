@@ -61,6 +61,10 @@ label start:
     scene bg news:
         fit "cover"
     
+    show news:
+        xsize 500
+        ysize 1005
+        align (0.5, 0.5)
     anchor "The planetary decline has accelerated overnight."
     anchor "Authorities are urging all citizens to remain calm."
     anchor "Scientists continue searching for a solution."
@@ -69,12 +73,32 @@ label start:
         fit "cover"
     
     narrator "A scientist looks at a monitor."
+    show male scientist talk:
+        xsize 400
+        ysize 1010
+        align(0.5, 0.0)
     scientist1 "Planetary Stability is 32%%"
     scientist1 "We have seventy-two hours."
+    hide male scientist talk
+    show female scientist idle:
+        xsize 400
+        ysize 1010
+        align(0.5, 0.5)
     narrator "*Another scientist looks up*"
+    hide female scientist idle
+    show female scientist talk:
+        xsize 400
+        ysize 1010
+        align(0.5, 0.5)
     scientist2 "And after that?"
+    hide female scientist talk
     narrator "Silence."
+    show male scientist talk:
+        xsize 400
+        ysize 1010
+        align(0.5, 0.5)
     scientist1 "There won't be an Astraea to save."
+    hide male scientist talk
 
     scene bg bedroom:
         fit "cover"
@@ -152,7 +176,9 @@ label start:
             "Yes":
                 jump decision_yes
             "No":
-                jump decision_no
+                jump choice_evacuate
+        
+        #you chose the magic 8 ball again
         label decision_yes:
             You"..."
             You"How do I save Astraea...My once beautiful home?"
@@ -177,6 +203,13 @@ label start:
             
             "Sleep anyway? There's nothing enjoyable to do":
                 jump lame_noo
+
+        label research_yus:
+        
+        label lame_noo:
+            jump choice_evacuate
+
+
     #chose to evacute people
     label choice_evacuate:
 
