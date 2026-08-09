@@ -218,7 +218,8 @@ label start:
                 jump research
         
         label forest:
-            scene bg black
+            scene bg forest dark:
+                fit "cover"
             narrator"You enter the forest."
             show mc talking:
                 xsize 400
@@ -230,6 +231,8 @@ label start:
                 xsize 400
                 ysize 1005
                 align (0.5, 0.5)
+            scene bg forest light:
+                fit "cover"
             narrator"As you go through the forest, a glow of light glimmers between the leaves of the trees."
             narrator"You pause."
             hide mc sad
@@ -264,7 +267,8 @@ label start:
                 jump research
         
         label research:
-            scene bg black
+            scene bg research dark:
+                fit "cover"
             hide mc talking
             show mc regular:
                 xsize 400
@@ -285,6 +289,8 @@ label start:
                 align(0.5, 0.5)
             You"Ugh, it's been an hour already..."
             hide mc talking
+            scene bg research light:
+                fit "cover"
             narrator"When all of a sudden, an old computer turns on and lights up the dark room."
             show mc talking:
                 xsize 400
@@ -334,6 +340,8 @@ label start:
             You"What did we do..?"
             narrator"We took too much."
             narrator"..."
+            scene bg research dark:
+                fit "cover"
             narrator"The computer shuts down and dims the entire room."
             hide mc talking
             show mc sad:
@@ -392,6 +400,9 @@ label start:
             ysize 1005
             align(0.5, 0.5)
         You"Every answer...begins as stardust."
+        hide mc talking
+        scene bg tbc:
+            fit "cover"
 
     return
 
