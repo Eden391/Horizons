@@ -184,7 +184,7 @@ label start:
             You"How do I save Astraea...My once beautiful home?"
             hide mc talking
             narrator"..."
-            narrator"THE ANSWER LIES IN STARDUST."
+            narrator"WHAT IS TAKEN MUST BE RETURNED."
             show mc sad:
                 xsize 400
                 ysize 1005
@@ -196,19 +196,212 @@ label start:
                 ysize 1005
                 align(0.5, 0.5)
             You"Whatever. This stupid thing is broken, or something."
-            narrator"You're tired, but don't feel like sleeping. What should you do?"
+            narrator"You put the 8-ball back down."
+            hide mc talking
+            narrator"..."
+            narrator"All of a sudden, the 8-ball shifts on your desk."
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"...?"
+            You"Locations?"
+            narrator"The magic 8-ball has given you several locations to visit. These locations will give you clues as to why Astraea is dying."
+            narrator"Which place do you visit first?"
+
         menu:
-            "Research on Stardust?":
-                jump research_yus
-            
-            "Sleep anyway? There's nothing enjoyable to do":
-                jump lame_noo
-
-        label research_yus:
+            "The forest":
+                jump forest
+            "The city":
+                jump city
+            "The abandoned research lab":
+                jump research
         
-        label lame_noo:
-            jump choice_evacuate
+        label forest:
+            scene bg black
+            narrator"You enter the forest."
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"Why would it tell me to go through here..."
+            hide mc talking
+            show mc sad:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            narrator"As you go through the forest, a glow of light glimmers between the leaves of the trees."
+            narrator"You pause."
+            hide mc sad
+            show mc regular:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"What was that?"
+            narrator"As you push through Till the End, you start to notice more of these glimmering showers of light almost as if it was following you."
+            narrator"You make your way to..."
+        menu:
+            "The city":
+                jump city
 
+            "The abandoned research lab":
+                jump research
+        
+        label city:
+            scene bg black
+            narrator"The city. Its bustling with Aastraeans, though not as busy ever since that day."
+            narrator"From observation and investigation, you learn that Astraea's energy grid is connected directly to the planetary core."
+            narrator"Although, you can't get that shimmering light off your head."
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"Where was that light coming from...?"
+            narrator"You decide to hit all three locations at once, heading towards the..."
+        
+        menu: 
+            "The abandoned research lab":
+                jump research
+        
+        label research:
+            scene bg black
+            hide mc talking
+            show mc regular:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            narrator"You walk through messy hallways filled with paperwork, and stumble upon a room."
+            hide mc regular
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            You"Could a clue be here?"
+            hide mc talking
+            narrator"You decide to go through the paperwork."
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            You"Ugh, it's been an hour already..."
+            hide mc talking
+            narrator"When all of a sudden, an old computer turns on and lights up the dark room."
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"...?"
+            You"Is this the clue that I've been looking for?"
+            hide mc talking
+            show mc regular:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            narrator"You watch the computer, and wait."
+            narrator"..."
+            narrator"After a few minutes, a file appears, adding colour to the empty white screen."
+            narrator"PROJECT: LAST LIGHT"
+            narrator"Do you open the file?"
+        menu:
+            "Yes":
+                jump yeah
+            "No":
+                jump choice_evacuate
+        label yeah:
+            narrator"As you open the file, text begins to flash."
+            narrator"Astraea does not produce energy."
+            narrator"..."
+            narrator"Astraea recieves it."
+            narrator"Just then, another file appears and opens on it's own."
+            hide mc regular
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align (0.5, 0.5)
+            You"What...?"
+            narrator"Planetary energy must eventually return to the stellar cycle."
+            hide mc talking
+            show mc sad:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            You"..."
+            hide mc sad
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            You"What did we do..?"
+            narrator"We took too much."
+            narrator"..."
+            narrator"The computer shuts down and dims the entire room."
+            hide mc talking
+            show mc sad:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            narrator"..."
+            hide mc sad
+            show mc talking:
+                xsize 400
+                ysize 1005
+                align(0.5, 0.5)
+            You"The energy..."
+            You"We took it."
+
+        narrator"You return home."
+        show mc sad:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        narrator"You go to your room, and pick up the magic 8-ball."
+        hide mc sad
+        show mc talking:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        You"What is taken...must be returned."
+        hide mc talking
+        show mc sad:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        narrator"You shake the 8-ball."
+        narrator"YES."
+        hide mc sad
+        show mc talking:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        You"But how?"
+        hide mc talking
+        show mc sad:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        narrator"..."
+        narrator"RETURN THE LIGHT."
+        hide mc sad
+        narrator"Astraea isn't simply dying. It's energy cycle is being interrupted."
+        narrator"The planet has been giving everything it has.."
+        narrator"and recieving nothing in return."
+        narrator"...The player looks through the window."
+        narrator"Stardust drifts through the dark sky."
+        show mc talking:
+            xsize 400
+            ysize 1005
+            align(0.5, 0.5)
+        You"Every answer...begins as stardust."
+
+    return
+
+    label nah:
+        narrator"You go back home."
+        narrator"You decide that you're too tired to deal with this, and decide to sleep on it."
+        scene bg black
+        narrator"You failed to save Astraea."
+    return
+    
 
     #chose to evacute people
     label choice_evacuate:
